@@ -46,7 +46,7 @@ print("-------------------------\n")
 print(f"Winner: {winner}\n")
 print("-------------------------")
 
-output_file = os.path.join("Election_Results.txt")
+output_file = os.path.join("analysis","Election_Results.txt")
 
 with open(output_file, "w") as file:
     file.write("Election Results:\n")

@@ -35,7 +35,7 @@ print(f"Average Change: ${revenue_change_average:.2f}")
 print(f"Greatest Increase in Profits: {Months[revenue_change.index(greatest_increase)+1]} (${greatest_increase})")
 print(f"Greatest Decrease in Profits: {Months[revenue_change.index(greatest_decrease)+1]} (${greatest_decrease})")
 
-output_file = os.path.join("Financial_Analysis.txt")
+output_file = os.path.join("analysis","Financial_Analysis.txt")
 
 with open(output_file, "w") as file:
     file.write("Financial Analysis:\n")
