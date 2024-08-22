@@ -26,13 +26,14 @@ with open(budget_data, mode='r') as csvfile:
         greatest_increase = max(revenue_change)
         greatest_decrease = min(revenue_change)
 
+
 print("Financial Analysis:")
 print("----------------------------")
-print(f"Total Months: {total_months}")
+print("Total Months:"+ str(total_months))
 print(f"Total: ${sum(Profit)}")
 print(f"Average Change: ${revenue_change_average:.2f}")
-print(f"Greatest Increase in Profits: {Months[revenue_change.index(greatest_increase)]} (${greatest_increase})")
-print(f"Greatest Decrease in Profits: {Months[revenue_change.index(greatest_decrease)]} (${greatest_decrease})")
+print(f"Greatest Increase in Profits: {Months[revenue_change.index(greatest_increase)+1]} (${greatest_increase})")
+print(f"Greatest Decrease in Profits: {Months[revenue_change.index(greatest_decrease)+1]} (${greatest_decrease})")
 
 output_file = os.path.join("Financial_Analysis.txt")
 
@@ -42,5 +43,5 @@ with open(output_file, "w") as file:
     file.write(f"Total Months: {total_months}\n")
     file.write(f"Total: ${sum(Profit)}\n")
     file.write(f"Average Change: ${revenue_change_average:.2f}\n")
-    file.write(f"Greatest Increase in Profits: {Months[revenue_change.index(greatest_increase)]} (${greatest_increase})\n")
-    file.write(f"Greatest Decrease in Profits: {Months[revenue_change.index(greatest_decrease)]} (${greatest_decrease})\n")
+    file.write(f"Greatest Increase in Profits: {Months[revenue_change.index(greatest_increase)+1]} (${greatest_increase})\n")
+    file.write(f"Greatest Decrease in Profits: {Months[revenue_change.index(greatest_decrease)+1]} (${greatest_decrease})\n")
